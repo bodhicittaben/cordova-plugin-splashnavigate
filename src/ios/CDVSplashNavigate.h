@@ -21,6 +21,8 @@
 #import <Cordova/CDVPlugin.h>
 
 @interface CDVSplashNavigate : CDVPlugin {
+    @private
+    BOOL _shouldHandleLoad;
 }
 
 - (void)go:(CDVInvokedUrlCommand*)command;
