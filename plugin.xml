@@ -10,7 +10,7 @@
     <dependency id="org.apache.cordova.splashscreen" url="https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git" commit="master" />
     <repo>https://github.com/bodhicittaben/cordova-plugin-splashnavigate.git</repo>
 
-    <js-module src="www/splashscreen.js" name="SplashNavigate">
+    <js-module src="www/splashnavigate.js" name="SplashNavigate">
         <clobbers target="navigator.splashnavigate" />
     </js-module>
 
