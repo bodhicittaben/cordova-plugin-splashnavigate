@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="org.apache.cordova.splashnavigate"
+      version="0.2.7">
+    <name>Splashnavigate</name>
+    <description>Cordova Splashnavigate Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,splashscreen,splashnavigate</keywords>
+    <dependency id="org.apache.cordova.splashscreen" url="https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git" commit="master" />
+    <repo>https://github.com/bodhicittaben/cordova-plugin-splashnavigate.git</repo>
+
+    <js-module src="www/splashscreen.js" name="SplashNavigate">
+        <clobbers target="navigator.splashnavigate" />
+    </js-module>
+
+    <!-- android -->
+    <!--
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SplashScreen">
+            <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/SplashScreen.java" target-dir="src/org/apache/cordova/splashscreen" />
+    </platform>
+    -->
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SplashNavigate">
+                <param name="ios-package" value="CDVSplashNavigate"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CDVSplashNavigate.h" />
+        <source-file src="src/ios/CDVSplashNavigate.m" />
+
+        <framework src="CoreGraphics.framework" />
+    </platform>
+
+</plugin>
